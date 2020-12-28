@@ -1,0 +1,124 @@
+   @mixin sidebar_element {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #000000;
+  }
+  .btn-del-label {
+    margin: 0.2rem;
+    padding: 0.2px;
+    float: right;
+    background-color: #ffffff;
+    border-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    .fa-times {
+      cursor: pointer;
+    }
+    &:hover {
+      border-radius: 50%;
+      background-color: rgb(201, 201, 201);
+      border-color: rgb(202, 202, 202);
+      transition-duration: 0.5s;
+      .fa-times {
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+  .btn-menu {
+    margin: 0.2rem;
+    padding: 0.2rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 254, 254);
+    border-radius: 50%;
+    .fa-plus {
+      cursor: pointer;
+      color: rgb(117, 117, 117);
+      border-radius: 50%;
+    }
+    &:hover {
+      // border-radius: 50%;
+      background-color: rgb(201, 201, 201);
+      border-color: rgb(202, 202, 202);
+      transition-duration: 0.5s;
+      .fas {
+        cursor: pointer;
+        // border-radius: 50%;
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+  .fas {
+    cursor: default;
+    padding: 0.5rem;
+    color: #333333;
+  
+    &:hover {
+      color: #333333;
+    }
+  }
+  .form-control {
+    padding: 0.3rem;
+    margin: 0.2rem;
+    border-color: #ffffff;
+  }
+  .form-control:focus {
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+  }
+  
+  .sidebar_header {
+    @include sidebar_element();
+    font-size: 2rem;
+    text-shadow: 3px 3px 3px rgb(190, 185, 185);
+  }
+  
+  .sidebar_title {
+    @include sidebar_element();
+    font-size: 1.2em;
+  }
+  
+  .sidebar_interct {
+    cursor: pointer;
+    @include sidebar_element();
+    font-size: 1.2em;
+    transition-duration: 0.3s;
+  
+    &:hover {
+      color: #d3d3d3;
+      transition-duration: 0.3s;
+  
+      .fa-trash-alt {
+        color: #d3d3d3;
+      }
+    }
+  }
+  
+  .label_container {
+    width: 100%;
+    font-size: 1.2em;
+    border-color: #ffffff;
+    transition-duration: 0.5s;
+    &:hover {
+      border-color: hsl(0, 0%, 81%);
+      box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 90, 250, 0.3);
+      transform: translate(-3px);
+      transition-duration: 0.5s;
+      .fa-times {
+        color: rgb(117, 117, 117);
+      }
+    }
+  }
+  
+  .label-tag {
+    border-radius: 40px 40px;
+    max-width: 10rem;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  .fa-times {
+    color: #ffffff;
+  }
